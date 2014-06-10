@@ -1,13 +1,14 @@
-namespace NorthwindSystem.Entities
+namespace NorthwindSystem.DAL
 {
+    using NorthwindSystem.Entities; // to access my Entity classes
     using System;
     using System.Data.Entity;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
 
-    public partial class NW : DbContext
+    internal partial class NWContext : DbContext
     {
-        public NW()
+        public NWContext()
             : base("name=NW")
         {
         }
