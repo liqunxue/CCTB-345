@@ -48,14 +48,29 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="DAL\SalesContext.cs" />
+    <Compile Include="Entities\Category.cs" />
+    <Compile Include="Entities\ContactDetail.cs" />
     <Compile Include="Entities\Customer.cs" />
+    <Compile Include="Entities\LineItem.cs" />
     <Compile Include="Entities\Order.cs" />
+    <Compile Include="Entities\Product.cs" />
+    <Compile Include="Migrations\201406101552218_AddTablbes.cs" />
+    <Compile Include="Migrations\201406101552218_AddTablbes.Designer.cs">
+      <DependentUpon>201406101552218_AddTablbes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201406101552218_AddTablbes.resx">
+      <DependentUpon>201406101552218_AddTablbes.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

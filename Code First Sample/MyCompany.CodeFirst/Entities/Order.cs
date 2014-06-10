@@ -9,7 +9,7 @@ namespace MyCompany.CodeFirst.Entities
 {
     public class Order
     {
-        [Key] 
+        [Key]
         public int OrderId { get; set; }
         public DateTime OrderDate { get; set; }
         public string ShipToAddress { get; set; }

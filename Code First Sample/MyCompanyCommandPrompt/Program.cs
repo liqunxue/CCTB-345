@@ -12,6 +12,7 @@ namespace MyCompanyCommandPrompt
     {
         static void Main(string[] args)
         {
+            
             // The using statement here ensures that the SalesContext object is properly "disposed of"
             // in the event of an exception
             // Note: Since SalesContext : DbContext, we need to

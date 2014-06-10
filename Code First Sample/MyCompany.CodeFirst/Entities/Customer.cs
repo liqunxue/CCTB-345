@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,7 +17,16 @@ namespace MyCompany.CodeFirst.Entities
         public string FirstName { get; set; }
         public string LastName { get; set; }
 
+        [NotMapped] // Tell EF not to expect a column in the DB table
+        public string FormalName
+        { get { return LastName + ", " + FirstName; } }
+
+        // [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
+        [NotMapped]
+        public string FullName { get; set; }
+
         // navigation properties
         public virtual IEnumerable<Order> Orders { get; set; }
+        public virtual ContactDetail ContacDetail { get; set; }
     }
 }
