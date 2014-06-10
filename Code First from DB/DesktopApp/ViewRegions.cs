@@ -25,7 +25,7 @@ namespace DesktopApp
             var data = manager.GetRegions();
             cboRegions.DataSource =data;
             cboRegions.DisplayMember = "RegionDescription";
-            cboRegions.ValueMember = "RegionId";
+            cboRegions.ValueMember = "RegionID";
         }
     }
 }
